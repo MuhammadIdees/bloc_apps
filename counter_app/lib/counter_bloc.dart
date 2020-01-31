@@ -1,13 +1,14 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 /// We need to specify the events that are going to take place
-/// when the app is used. In out counter app their are only two
+/// when the app is used. In out counter app their are only three
 /// events so we'll use an enum
 /// 
 /// increment: for incrementing count
 /// decrement: for decrementing count
+/// reset: reset counter to init state
 
-enum CounterEvent { increment, decrement }
+enum CounterEvent { increment, decrement, reset }
 
 /// The bloc will react on those events and update the state occordingly
 /// 
@@ -29,6 +30,8 @@ class CounterBloc extends Bloc<CounterEvent, int> {
       case CounterEvent.decrement:
         yield state - 1;
         break;
+      case CounterEvent.reset:
+        yield initialState;
     }
   }
   

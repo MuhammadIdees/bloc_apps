@@ -23,9 +23,10 @@ class CounterPage extends StatelessWidget {
         },
       ),
 
-      floatingActionButton: Column(
-        crossAxisAlignment: CrossAxisAlignment.end,
+      floatingActionButton: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.end,
+        mainAxisSize: MainAxisSize.max,
         children: <Widget>[
           Padding(
             padding: EdgeInsets.all(4.0),
@@ -42,6 +43,15 @@ class CounterPage extends StatelessWidget {
               child: Icon(Icons.remove),
               onPressed: (){
                 counterBloc.add(CounterEvent.decrement);
+              }
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.all(4.0),
+            child: FloatingActionButton(
+              child: Icon(Icons.refresh),
+              onPressed: (){
+                counterBloc.add(CounterEvent.reset);
               }
             ),
           ),
