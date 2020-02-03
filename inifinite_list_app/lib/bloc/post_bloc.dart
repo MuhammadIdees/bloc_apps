@@ -35,7 +35,7 @@ class PostBloc extends Bloc<PostEvent, PostState> {
           final posts = await _fetchPosts(currentState.posts.length, 20);
           yield posts.isEmpty 
               ? currentState.copyWith(hasReachedMax: true)
-              : PostLoaded (posts: posts, hasReachedMax: false);
+              : PostLoaded (posts: currentState.posts + posts, hasReachedMax: false);
         }
       } catch (e) {
         yield PostError();
@@ -54,6 +54,10 @@ class PostBloc extends Bloc<PostEvent, PostState> {
   bool _hasReachedMax(PostState state) => state is PostLoaded && state.hasReachedMax;
 
   Future<List<Post>> _fetchPosts(int startIndex, int limit) async {
+
+    print(startIndex);
+    print(limit);
+
     final response = await httpClient.get('https://jsonplaceholder.typicode.com/posts?_start=$startIndex&_limit=$limit');
 
     if (response.statusCode == 200){
