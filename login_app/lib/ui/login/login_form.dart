@@ -88,47 +88,79 @@ class _LoginFormState extends State<LoginForm> {
                 children: <Widget>[
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 20),
-                    child: Image.asset('assets/images/flutter_logo.png', height: 150),
+                    child: Image.asset('assets/images/flutter_logo.png', height: 100),
                   ),
 
-                  TextFormField(
-                    controller: _emailController,
-                    decoration: InputDecoration(
-                      icon: Icon(Icons.email),
-                      labelText: 'Email',
+                  Card(
+                    elevation: 3,
+                    child: Padding(
+                      padding: const EdgeInsets.all(24.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: <Widget>[
+                          // Text(
+                          //   "LOGIN",
+                          //   style: TextStyle(
+                          //     fontSize: 24.0,
+                          //   ),
+                          // ),
+
+                          TextFormField(
+                            controller: _emailController,
+                            decoration: InputDecoration(
+                              icon: Icon(Icons.email),
+                              labelText: 'Email',
+                              border: OutlineInputBorder(),
+                              contentPadding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 2.0),
+                            ),
+                            keyboardType: TextInputType.emailAddress,
+                            autovalidate: true,
+                            autocorrect: false,
+                            validator: (_){
+                              return !state.isEmailValid ? 'Invalid Email': null;
+                            },
+                          ),
+
+                          SizedBox(
+                            height: 24.0,
+                          ),
+
+                          TextFormField(
+                            controller: _passwordController,
+                            decoration: InputDecoration(
+                              icon: Icon(Icons.lock),
+                              labelText: 'Password',
+                              border: OutlineInputBorder(),
+                              contentPadding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 2.0),
+                            ),
+                            obscureText: true,
+                            autovalidate: true,
+                            autocorrect: false,
+                            validator: (_){
+                              return !state.isPasswordValid ? 'Invalid Password': null;
+                            },
+                          ),
+
+                          SizedBox(
+                            height: 20.0,
+                          ),
+
+                          LoginButton(
+                            onPressed: isLoginButtonEnabled(state)
+                              ? _onFormSubmitted
+                              : null,
+                          ),
+                        ],
+                      ),
                     ),
-                    keyboardType: TextInputType.emailAddress,
-                    autovalidate: true,
-                    autocorrect: false,
-                    validator: (_){
-                      return !state.isEmailValid ? 'Invalid Email': null;
-                    },
                   ),
 
-                  TextFormField(
-                    controller: _passwordController,
-                    decoration: InputDecoration(
-                      icon: Icon(Icons.lock),
-                      labelText: 'Password',
-                    ),
-                    obscureText: true,
-                    autovalidate: true,
-                    autocorrect: false,
-                    validator: (_){
-                      return !state.isPasswordValid ? 'Invalid Password': null;
-                    },
-                  ),
 
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 20.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: <Widget>[
-                        LoginButton(
-                          onPressed: isLoginButtonEnabled(state)
-                            ? _onFormSubmitted
-                            : null,
-                        ),
                         GoogleLoginButton(),
                         CreateAccountButton(userRepository: _userRepository),
                       ],
