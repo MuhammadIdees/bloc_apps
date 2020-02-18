@@ -86,10 +86,10 @@ class _LoginFormState extends State<LoginForm> {
             child: Form(
               child: ListView(
                 children: <Widget>[
-                  Padding(
-                    padding: EdgeInsets.symmetric(vertical: 20),
-                    child: Image.asset('assets/images/sawalia-logo.png', height: 100),
-                  ),
+                  // Padding(
+                  //   padding: EdgeInsets.symmetric(vertical: 20),
+                  //   child: Image.asset('assets/images/sawalia-logo.png', height: 100),
+                  // ),
 
                   Card(
                     elevation: 3,
@@ -98,12 +98,20 @@ class _LoginFormState extends State<LoginForm> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: <Widget>[
-                          // Text(
-                          //   "LOGIN",
-                          //   style: TextStyle(
-                          //     fontSize: 24.0,
-                          //   ),
-                          // ),
+                          Center(
+                            child: Text(
+                              "LOGIN",
+                              style: TextStyle(
+                                fontSize: 32.0,
+                                fontFamily: 'FredokaOne',
+                                color: Color(0xff011f4b),
+                              ),
+                            ),
+                          ),
+
+                          SizedBox(
+                            height: 24.0,
+                          ),
 
                           TextFormField(
                             controller: _emailController,
