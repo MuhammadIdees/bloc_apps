@@ -8,6 +8,7 @@ import 'package:login_app/ui/home_screen.dart';
 import 'package:login_app/ui/login/login_screen.dart';
 import 'package:login_app/ui/splash_screen.dart';
 import 'package:login_app/utils/firebase_notifications.dart';
+import 'package:login_app/utils/themes.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,6 +36,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: lightTheme,
       home: BlocBuilder<AuthenticationBloc, AuthenticationState>(
         builder: (context, state){
           if (state is Uninitialized){
