@@ -1,0 +1,37 @@
+[
+    {
+        "question"      : "What was the what what walaa",
+        "chapter"       : "1",
+        "subject"       : "Biology",
+        "type"          : ["Numerical", "Descriptive"],
+        "years"         : ["2015"]
+    },
+    {
+        "question"      : "A particle of mass 1.67x10\u207B\u00B2\u2077 kg and charge 1.6x10\u207B\u00B9\u2077 C is to be held motionless between two horizontal parallel plates the voltage applied between plates is 14.32x10\u207B\u2079 volt. Calulate the distace between the plates.",
+        "chapter"       : "1",
+        "subject"       : "Biology",
+        "type"          : ["Numerical"],
+        "years"         : ["2015","2016","2017"]
+    },
+    {
+        "question"      : "Change the following into indirect narration:\n\n\t(a) He said to me, 'I am going to Islamabad by air tomorrow and it is going to be so much fun'\n\n\t(b) He said to the student, 'Clean the black board'\n\n\t(c) Raheel said,'I have completed my work.'\n\n\t(d) They said, 'Alas! We cannot attend tehe party'",
+        "chapter"       : "2",
+        "subject"       : "English",
+        "type"          : ["Grammer"],
+        "years"         : ["2018", "2017","2015", "2014","2011"]
+    },
+    {
+        "question"      : "Bekaar kyn beethte hoo saara saara din?\u2081",
+        "chapter"       : "2",
+        "subject"       : "Biology",
+        "type"          : ["Descriptive", "Derivation"],
+        "years"         : ["2015","2016","2017", "2009"]
+    },
+    {
+        "question"      : "Write a short note on what ever topic you know",
+        "chapter"       : "3",
+        "subject"       : "Biology",
+        "type"          : ["Short Note"],
+        "years"         : ["2015","2016","2017"]
+    }
+]

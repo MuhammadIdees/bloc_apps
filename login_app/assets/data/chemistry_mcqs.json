@@ -1,0 +1,47 @@
+[
+    {
+        "id": "1",
+        "question": "What is the chemical formula of water?",
+        "option 1": "NaCl",
+        "option 2": "H\u2084SO\u2084",
+        "option 3": "HCL",
+        "option 4": "H\u2082O",
+        "answer": "4"
+    },
+    {
+        "id": "2",
+        "question": "What is the chemical formula of salt?",
+        "option 1": "NaCl",
+        "option 2": "H\u2084SO\u2084",
+        "option 3": "HCL",
+        "option 4": "H\u2082O",
+        "answer": "1"
+    },
+    {   
+        "id": "3",
+        "question": "Which of the following is an acid?",
+        "option 1": "NaCl",
+        "option 2": "Cl",
+        "option 3": "HCL",
+        "option 4": "H\u2082O",
+        "answer": "3"
+    },
+    {
+        "id": "4",
+        "question": "What of the following is a base?",
+        "option 1": "NaCl",
+        "option 2": "NaOH",
+        "option 3": "HCL",
+        "option 4": "H\u2082O",
+        "answer": "2"
+    },
+    {
+        "id": "5",
+        "question": "What is the symbol of sodium",
+        "option 1": "Na",
+        "option 2": "H",
+        "option 3": "CL",
+        "option 4": "S",
+        "answer": "1"
+    }
+]

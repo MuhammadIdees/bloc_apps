@@ -1,0 +1,56 @@
+[
+    {
+        "id": 2,
+        "title": "Physics",
+        "color": "0xFFF3D250",
+        "image": "assets/images/physics_icon.png"
+    },
+    {
+        "id": 3,
+        "title": "Chemistry",
+        "color": "0xFF90CCF4",
+        "image": "assets/images/chemistry_icon.png"
+    },
+    {
+        "id": 1,
+        "title": "Mathematics",
+        "color": "0xFFF78888",
+        "image": "assets/images/math_icon.png"
+    },
+    {
+        "id": 5,
+        "title": "English",
+        "color": "0xFFF78888",
+        "image": "assets/images/english_icon.png"
+    },
+    {
+        "id": 6,
+        "title": "Pakistan Studies",
+        "color": "0xFFF78888",
+        "image": "assets/images/pakstd_icon.png"
+    },
+    {
+        "id": 4,
+        "title": "Urdu",
+        "color": "0xFFF78888",
+        "image": "assets/images/urdu_icon.png"
+    },
+    {
+        "id": 7,
+        "title": "Botany",
+        "color": "0xFFF78888",
+        "image": "assets/images/botany_icon.png"
+    },
+    {
+        "id": 8,
+        "title": "Zoology",
+        "color": "0xFFF78888",
+        "image": "assets/images/zoology_icon.png"
+    },
+    {
+        "id": 9,
+        "title": "Islamiat",
+        "color": "0xFFF78888",
+        "image": "assets/images/islamiat_icon.png"
+    }
+]
