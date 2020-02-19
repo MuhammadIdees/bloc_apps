@@ -86,10 +86,10 @@ class _LoginFormState extends State<LoginForm> {
             child: Form(
               child: ListView(
                 children: <Widget>[
-                  // Padding(
-                  //   padding: EdgeInsets.symmetric(vertical: 20),
-                  //   child: Image.asset('assets/images/sawalia-logo.png', height: 100),
-                  // ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 20),
+                    child: Image.asset('assets/images/sawalia_logo.png', height: 80),
+                  ),
 
                   Card(
                     elevation: 3,
