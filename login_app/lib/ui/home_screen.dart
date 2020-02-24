@@ -18,20 +18,6 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Home'),
-        actions: <Widget> [
-          IconButton(
-            icon: Icon(Icons.exit_to_app),
-            onPressed: () {
-              BlocProvider.of<AuthenticationBloc>(context).add(
-                LoggedOut(),
-              );
-            },
-          ),
-        ]
-      ),
-
       body: SafeArea(
         child: ScrollConfiguration(
           behavior: ScrollBehavior(),
@@ -41,7 +27,28 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
                 
-                MainMenuHeader(),
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    MainMenuHeader(),
+
+                    Card(
+                      elevation: 2,
+                      color: darkBlueColor,
+                      child: IconButton(
+                        icon: Icon(Icons.exit_to_app),
+                        color: yellowWhiteColor,
+                        onPressed: () {
+                          BlocProvider.of<AuthenticationBloc>(context).add(
+                            LoggedOut(),
+                          );
+                        },
+                      ),
+                    ),
+                  ],
+                ),
                 
                 FutureBuilder<List<Subjects>>(
                   future: repository.get(),
@@ -257,7 +264,7 @@ class MainMenuHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(bottom: paddingL),
+      // padding: const EdgeInsets.only(bottom: paddingL),
       child: Container(
         alignment: Alignment.centerLeft,
         child: Text(

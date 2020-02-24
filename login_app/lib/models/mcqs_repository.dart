@@ -23,6 +23,7 @@ class McqRepository {
           return mcqs;
         }
     } else  {
+      print(response.body);
       throw Exception('Failed to load post');
     }
   }

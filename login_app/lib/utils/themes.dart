@@ -12,9 +12,9 @@ final ThemeData lightTheme = ThemeData(
   ),
   textTheme: TextTheme(
     display1: TextStyle(
-      fontFamily: 'RobotoMedium',
-      fontSize: 34.0,
-      color: Color(0XFF004A87),
+      fontFamily: 'FredokaOne',
+      color: Color(0xff011f4b),
+      fontSize: 32.0,
     ),
     headline: TextStyle(
       fontFamily: 'Roboto',
